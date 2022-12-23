@@ -1,9 +1,26 @@
+import React, {Component} from "react";
+
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return <h1>This is a test: {this.props.testFunc()}</h1>;
+  }
+}
+
+const Hello = props => {
+  return <h1>This is a test: {props.num + 30000}</h1>;
+};
+
 function App() {
   const name = 'StarGazers'
   return (
     <div className="container">
       <article>
         <hgroup>
+          <Welcome testFunc={() => "I am " + (1300 + 37)}/>
+          <Hello num={1337} />
           <img src="images/group.svg" alt="StarGazers Group" />
           <h1>Meet the <i style={{ color: "SteelBlue" }}>{name}</i></h1>
           <p>Members of an <b>intergalactic alliance</b><br />
