@@ -18,9 +18,11 @@ function App() {
 
   function memberJump(offset) {
     let index = memberInfo.id + offset;
-    if (index >= 0 && index < cast.length) {
-      setMemberInfo(cast[index]);
+    index %= cast.length;
+    if (index < 0) {
+      index += cast.length;
     }
+    setMemberInfo(cast[index]);
   }
 
   return (
