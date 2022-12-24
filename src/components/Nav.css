@@ -1,0 +1,26 @@
+nav ul li, nav ul li a {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+nav summary + ul li {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+nav summary + ul li {
+  height: 1.5em;
+}
+
+nav summary+ul a {
+  line-height: 0.75em;
+}
+
+nav details li a {
+  font-size: 0.7em;
+}
+
+details[role="list"] summary + ul li a:hover {
+  color: var(--primary);
+  font-weight: 700;
+}
